@@ -25,19 +25,11 @@ class App extends Component {
     this.setState({
       copo: 'refrigerante'
     })
-
-    /* Declarando desse modo funciona, mas não vai alterar na prática a sua app. Então o jeito correto é acima.
-    this.state.copo = 'refrigerante';
-    */
   }
 
   render() {
     const { clock, copo } = this.state
-    /* 
-      this.state.clock
-      this.state.copo
-      é o mesmo que a constante declarada acima
-    */
+
     return(
       <div>
         <h1>{ clock }</h1>
