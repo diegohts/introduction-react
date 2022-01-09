@@ -49,7 +49,7 @@ const App = () => {
 
   return (
     <div>
-      <p>Digital Innovation One - Renderização Condicional</p>
+      <p>Digital Innovation One - Manipulação de Eventos</p>
       <p>Seja bem vindo, Diego!</p>
       <div>
         <ul>

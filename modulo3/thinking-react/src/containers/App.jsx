@@ -1,34 +1,18 @@
 import React from "react";
-
-const listCustomer = [
-  {
-    id: 1,
-    name: 'Diego Henrique',
-    skills: ['React', 'Node', 'CSS', 'Webpack']
-  },
-  {
-    id: 2,
-    name: 'José Freitas',
-    skills: ['HTML', 'React Native', 'Go', 'JS']
-  },
-  {
-    id: 3,
-    name: 'Fulano de Tal',
-    skills: ['Assembly']
-  },
-  {
-    id: 4,
-    name: 'Ciclano Silva',
-    skills: ['Reason']
-  }
-]
+import mock from '../mock'
+import Button from '../components/Button'
 
 const App = () => {
+
+  const handleClick = (id) => {
+    console.log('deletar cliente')
+    alert(`ID do cliente: ${id}`)
+  }
 
   const renderCustomers = (customer, index) => {
     return (
       <div key={`customer-${customer.id}`}>
-        <li>{customer.name}</li>
+        <li>{customer.name}  <Button onClick={() => handleClick(customer.id)}>Deletar o Cliente </Button></li>
         {customer.skills.map(renderSkills)}
       </div>
     )
@@ -48,7 +32,7 @@ const App = () => {
       <p>Seja bem vindo, Diego!</p>
       <div>
         <ul>
-          {listCustomer.map(renderCustomers)}
+          {mock.map(renderCustomers)}
         </ul>
       </div>
     </div>
